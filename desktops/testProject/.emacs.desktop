@@ -1,0 +1,83 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue May 30 20:49:56 2017
+;; Desktop file format version 208
+;; Emacs version 25.2.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22829 45252 451045 128000) (desktop . "208") "sp@sp" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-15-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#c0c5ce") (background-color . "#2b303b") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (sticky) (environment) (frameset--id . "F78C-98C5-2547-0DBB") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 56) (width . 209) (left + -1) (top . 26)) ((min-height . 4) (min-width . 26) (min-height-ignore . 2) (min-width-ignore . 26) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 72) (min-pixel-width . 234) (min-pixel-height-ignore . 36) (min-pixel-width-ignore . 234) (min-pixel-height-safe . 18) (min-pixel-width-safe . 36)) hc (pixel-width . 1920) (pixel-height . 998) (total-width . 213) (total-height . 55) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 954) (pixel-height . 998) (total-width . 106) (total-height . 55) (normal-height . 1.0) (normal-width . 0.49687499999999996) (buffer "index.js" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 7) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 119) (start . 1))) (leaf (last . t) (pixel-width . 966) (pixel-height . 998) (total-width . 107) (total-height . 55) (normal-height . 1.0) (normal-width . 0.503125) (buffer "*shell*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 7) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 2578) (start . 23)))))])
+(setq comint-input-ring nil)
+(setq compile-history nil)
+(setq desktop-missing-file-warning nil)
+(setq dired-regexp-history nil)
+(setq extended-command-history '("indium-connect-to-nodejs" "tabify" "shell" "desktop+-create"))
+(setq face-name-history nil)
+(setq file-name-history '("/home/sp/work/test/index.html"))
+(setq grep-find-history nil)
+(setq grep-history nil)
+(setq ido-buffer-history nil)
+(setq ido-last-directory-list '(("/home/sp/work/" . "test/") ("/home/sp/" . ".emacs.d/") ("/home/" . "sp/") ("/" . "home/")))
+(setq ido-work-directory-list '("/home/sp/work/test/" "/home/sp/.emacs.d/config/" "/home/sp/.emacs.d/" "/home/sp/work/d3_ls/" "/home/sp/"))
+(setq ido-work-file-list '("index.html" "desktop.el" "init.el" "index.js" "bindings.el" "helper.js" "intit.el" ".emacs"))
+(setq minibuffer-history '("e10d26ec-2104-409c-a2b1-320ae5765934" "9229" "127.0.0.1" "testProject" "10"))
+(setq query-replace-history nil)
+(setq read-expression-history nil)
+(setq regexp-history nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq search-ring nil)
+(setq shell-command-history nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  nil
+  "*shell*"
+  'shell-mode
+  '(linum-mode)
+  2578
+  '(2332 nil)
+  nil
+  '(:dir "/home/sp/work/test/")
+  nil
+  '((mark-ring (1297 1297 1575 1616 1548 1297 1481 837 238))))
+
+(desktop-create-buffer 208
+  "/home/sp/work/test/index.js"
+  "index.js"
+  'js-mode
+  '(linum-mode)
+  119
+  '(96 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/sp/work/test/index.html"
+  "index.html"
+  'html-mode
+  '(linum-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (case-fold-search . t))
+  '((mark-ring (22))))
+
+(desktop-create-buffer 208
+  nil
+  "*Compile-Log*"
+  'compilation-mode
+  '(linum-mode)
+  1
+  '(nil nil)
+  t
+  '(:command nil :dir nil)
+  nil
+  '((mark-ring nil)))
+

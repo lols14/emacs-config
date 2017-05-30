@@ -18,9 +18,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(package-selected-packages
    (quote
-	(indium string-inflection multiple-cursors sublime-themes smex all-the-icons neotree))))
+	(js2-refactor auto-complete ac-js2 indium desktop+ string-inflection multiple-cursors sublime-themes smex all-the-icons neotree)))
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -28,10 +30,14 @@
  ;; If there is more than one, they won't work right.
  )
 
+(load "~/.emacs.d/config/bindings.el")
+(load "~/.emacs.d/config/desktop.el")
 
-(load "~/.emacs.d/config/bindings.el")		
+;; Unicode
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
 
-
+;; Truncate
 (set-default 'truncate-lines t)
 (setq debug-on-error t)
 
@@ -59,31 +65,23 @@
 (require 'paren)
 (setq show-paren-style 'expression)
 (show-paren-mode 2)
-;;(set-face-background 'show-paren-match-face "lightgreen")
+(set-face-background 'show-paren-match-face "teal")
 
 ;; Linum
 (setq linum-format "%d")
 (global-linum-mode 1)
 	
-
 ;;ido
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
-
-;; bs
-(require 'bs)
-(setq bs-configurations
-	  '(("files" "^\\*scratch\\*" nil nil bs-visits-non-file bs-sort-buffer-interns-are-last)))
-
-(global-set-key (kbd "<f2>") 'bs-show)
 
 ;;Multiple cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-;;(global-set-key (kbd "C-c m c") 'mc/edit-lines)		
+;;(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
 
 (require 'string-inflection)
@@ -92,7 +90,6 @@
 (global-set-key (kbd "C-c L") 'string-inflection-lower-camelcase)  ;; Force to lowerCamelCase
 (global-set-key (kbd "C-c J") 'string-inflection-java-style-cycle) ;; Cycle through Java styles
 
-;;smex
 (global-set-key (kbd "M-x") 'smex)
 
 
@@ -107,7 +104,47 @@
 (setq doom-neotree-enable-file-icons t)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+;;smex
+;; Ibuffer
+(require 'ibuf-ext)
+(global-set-key (kbd "<f2>") 'ibuffer)
+
+(add-hook 'ibuffer-mode-hook
+          (lambda ()
+            (ibuffer-switch-to-saved-filter-groups "default")))
+
+(setq ibuffer-saved-filter-groups
+      (quote (("default"
+               ("dired" (mode . dired-mode))
+               ("planner" (or
+                           (name . "^\\*Calendar\\*$")
+                           (name . "^diary$")
+                           (mode . muse-mode)))
+               ("emacs" (or
+                         (name . "^\\*scratch\\*$")
+                         (name . "^\\*Messages\\*$")))
+               ("gnus" (or
+                        (mode . message-mode)
+                        (mode . bbdb-mode)
+                        (mode . mail-mode)
+                        (mode . gnus-group-mode)
+                        (mode . gnus-summary-mode)
+                        (mode . gnus-article-mode)
+                        (name . "^\\.bbdb$")
+                        (name . "^\\.newsrc-dribble")))))))
+
+;; ac
+(require 'auto-complete-config)
+(ac-config-default)
 
 
+(require 'paren)
+;; js
+(require 'js2-refactor)
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'js2-refactor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(setq js2-highlight-level 3)
 
-
+(js2r-add-keybindings-with-prefix "C-c C-n")
