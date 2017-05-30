@@ -10,33 +10,31 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/sp/.emacs.d/"
- "/home/sp/work/test/"
  "/home/sp/work/d3_ls/"
+ "/home/sp/work/test/"
+ "/home/sp/.emacs.d/"
  "/home/sp/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "index.js"
  "index.html"
+ "index.js"
  "helper.js"
+ "init.el"
  "intit.el"
  ".emacs"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/sp/.emacs.d/" (22829 18876 131814 628000) ".gitignore" "init.el" ".mc-lists.el" "config/" "init.el~" "../" "network-security.data" "ido.last~" "./" "session.10348cefae1f451806149609037283999900000022540094" "elpa/" "auto-save-list/" "ido.last" ".git/")
+ ("/home/sp/" (22828 37704 533725 881000) ".bash_logout" "node_modules/" ".mongorc.js" "Android/" ".v8flags.5.4.500.48.sp.json" ".oracle_jre_usage/" ".zcompdump" ".wine/" "Documents/" "work/" "Pictures/" ".v8flags.5.4.500.48.1952a01898073d1e561b9b4f2e42cbd7.json" ".ViberPC/" ".lein/" ".zsh-update" ".dbshell" ".jupyter/" "tools/" ".bashrc" ".gnome/" ".stellarium/" ".ionic/" "libs/" ".gnupg/" ".zshrc" ".v8flags.5.1.281.89.1952a01898073d1e561b9b4f2e42cbd7.json" ".zcompdump-localhost-5.2" ".vscode/" ".zsh_history" ".oh-my-zsh/" ".steampid" "drivers/" ".avocode/" ".nvm/" "../" ".bundle/" ".wget-hsts" ".IdeaIC2016.3/" "Desktop/" ".local/" "node" ".mongotron/" ".android/" "Public/" ".pulse-cookie" "PlayOnLinux's virtual drives/" ".mysql_history" ".netrc" ".swt/" ".cache/" ".tmux/" ".atom/" ".pki/" ".hyper_plugins/" ".config/" ".npm/" "Downloads/" ".pry_history" ".psql_history" ".inputrc" ".smex-items" ".esd_auth" ".ipython/" ".xournal/" ".ssh/" ".dbus/" "./" ".emacs.d/" ".v8flags.5.4.500.45.sp.json" ".AndroidStudio2.3/" ".zcompdump-sp-5.2" ".node_repl_history" ".v8flags.5.1.281.89.sp.json" ".pgadmin3" ".sqlectron.json" ".planck_history" ".httpie/" ".PyCharmCE2016.3/" "Music/" ".tmux.conf" ".parinfer-file-extensions.txt" ".electron/" ".m2/" ".PlayOnLinux/" ".gem/" ".hyper.js" ".gitconfig" ".ipynb_checkpoints/" ".nightcode.core/" "Videos/" ".virtualenvs/" "var/" ".node-gyp/" "Templates/" ".emacs22211" ".mozilla/" "bin/" ".docker/" ".steam/" ".gitkraken/" ".steampath" ".ICEauthority" ".v8flags.5.1.281.88.sp.json" "scale/" ".bash_history" ".bash_profile" ".java/" ".cordova/")
 
- ("/home/sp/.emacs.d/config/" (22829 18252 772871 541000) "bindings.el" "../" "./" "customize.le")
-
- ("/home/sp/" (22829 17653 549848 811000) ".bash_logout" "node_modules/" ".mongorc.js" "Android/" ".v8flags.5.4.500.48.sp.json" ".oracle_jre_usage/" ".zcompdump" ".wine/" "Documents/" "work/" "Pictures/" ".v8flags.5.4.500.48.1952a01898073d1e561b9b4f2e42cbd7.json" ".ViberPC/" ".lein/" ".zsh-update" ".dbshell" ".jupyter/" "tools/" ".bashrc" ".gnome/" ".stellarium/" ".ionic/" "libs/" ".gnupg/" ".zshrc" ".v8flags.5.1.281.89.1952a01898073d1e561b9b4f2e42cbd7.json" ".zcompdump-localhost-5.2" ".vscode/" ".zsh_history" ".oh-my-zsh/" ".steampid" "drivers/" ".avocode/" ".nvm/" "../" ".bundle/" ".wget-hsts" ".IdeaIC2016.3/" "Desktop/" ".local/" "node" ".mongotron/" ".android/" "Public/" ".pulse-cookie" "PlayOnLinux's virtual drives/" ".mysql_history" ".netrc" ".swt/" ".cache/" ".tmux/" ".atom/" ".pki/" ".hyper_plugins/" ".config/" ".npm/" "Downloads/" ".pry_history" ".psql_history" ".inputrc" ".smex-items" ".esd_auth" ".ipython/" ".xournal/" ".ssh/" ".dbus/" "./" ".emacs.d/" ".v8flags.5.4.500.45.sp.json" ".AndroidStudio2.3/" ".zcompdump-sp-5.2" ".node_repl_history" ".v8flags.5.1.281.89.sp.json" ".pgadmin3" ".sqlectron.json" ".planck_history" ".httpie/" ".PyCharmCE2016.3/" "Music/" ".tmux.conf" ".parinfer-file-extensions.txt" ".electron/" ".m2/" ".PlayOnLinux/" ".gem/" ".hyper.js" ".gitconfig" ".ipynb_checkpoints/" ".nightcode.core/" "Videos/" ".virtualenvs/" "var/" ".node-gyp/" "Templates/" ".emacs22211" ".mozilla/" "bin/" ".docker/" ".steam/" ".gitkraken/" ".steampath" ".ICEauthority" ".v8flags.5.1.281.88.sp.json" "scale/" ".bash_history" ".bash_profile" ".java/" ".cordova/")
-
- ("/home/sp/work/test/" (22828 38603 894604 270000) "index.js~" "index.js" "../" "index.html" "index.html~" "./" "#index.js#")
+ ("/home/sp/.emacs.d/" (22828 37115 226772 763000) ".gitignore" "init.el" ".mc-lists.el" "init.el~" "../" "network-security.data" "./" "elpa/" "auto-save-list/" "ido.last" ".git/")
 
  ("/home/sp/work/d3_ls/" (22828 37745 798582 553000) "helper.js" ".gitignore" "node_modules/" "zoom.html" ".#helper.js" "sp500.csv" "../" "#helper.js#" "src/" "index.html" "./" "package.json" "README.md" "styles.css" ".git/" "data.tsv")
+
+ ("/home/sp/work/test/" (22828 37761 1529 748000) "index.js~" "index.js" "../" "./")
 
  ("/home/sp/work/" (22828 37591 80119 948000) "d3_scale/" "d3_cljs/" "chart/" "grid/" "flowers_ls/" "codingames/" "../" "./" "flowers-shop/" "app/" "d3_less/" "test/" "progressbar/" "clj_coding/" "address-book/" "d3_ls/")
 
