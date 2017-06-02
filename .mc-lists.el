@@ -11,5 +11,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+		down-list
 		suspend-frame
 		))

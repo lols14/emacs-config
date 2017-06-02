@@ -21,7 +21,7 @@
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(package-selected-packages
    (quote
-	(js2-refactor auto-complete ac-js2 indium desktop+ string-inflection multiple-cursors sublime-themes smex all-the-icons neotree)))
+	(json-mode rainbow-mode js-doc js2-refactor auto-complete ac-js2 indium desktop+ string-inflection multiple-cursors sublime-themes smex all-the-icons neotree)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -100,7 +100,7 @@
 (require 'neotree)
 (require 'all-the-icons)
 (global-set-key [f8] 'neotree-toggle)
-(setq-default neo-smart-open t)
+;;(setq-default neo-smart-open t)
 (setq doom-neotree-enable-file-icons t)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
@@ -137,14 +137,23 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-
 (require 'paren)
 ;; js
 (require 'js2-refactor)
-(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(add-hook 'js2-mode-hook 'js2-refactor-mode)
+(require 'js-doc)
+
+(add-hook 'js-mode-hook 'js2-mode)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
 (add-hook 'js2-mode-hook 'ac-js2-mode)
 (setq js2-highlight-level 3)
 
 (js2r-add-keybindings-with-prefix "C-c C-n")
+
+;; js-doc
+(setq js-doc-mail-address "sergiypavlichenko@gmail.com"
+       js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
+
+ (add-hook 'js2-mode-hook
+           #'(lambda ()
+               (define-key js2-mode-map "\C-c-d" 'js-doc-insert-function-doc)
+               (define-key js2-mode-map "@" 'js-doc-insert-tag)))
