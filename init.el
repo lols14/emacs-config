@@ -1,5 +1,4 @@
-;; This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
+;;'t delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 
@@ -21,7 +20,7 @@
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(package-selected-packages
    (quote
-	(json-mode rainbow-mode js-doc js2-refactor auto-complete ac-js2 indium desktop+ string-inflection multiple-cursors sublime-themes smex all-the-icons neotree)))
+	(helm-projectile projectile use-package web-beautify xref-js2 json-mode rainbow-mode js-doc js2-refactor auto-complete ac-js2 indium desktop+ string-inflection multiple-cursors sublime-themes smex all-the-icons neotree)))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -32,6 +31,8 @@
 
 (load "~/.emacs.d/config/bindings.el")
 (load "~/.emacs.d/config/desktop.el")
+(load "~/.emacs.d/config/js.el")
+(load "~/.emacs.d/config/project.el")
 
 ;; Unicode
 (set-language-environment "UTF-8")
@@ -42,8 +43,8 @@
 (setq debug-on-error t)
 
 ;; Autosave
-(setq backup-inhibited t)
-(setq auto-save-default nil)
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
 
 ;; tabs
 (defun my-insert-tab-char ()
@@ -84,12 +85,10 @@
 ;;(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
 
-(require 'string-inflection)
 (global-set-key (kbd "C-c i") 'string-inflection-cycle)
 (global-set-key (kbd "C-c C") 'string-inflection-camelcase)        ;; Force to CamelCase
 (global-set-key (kbd "C-c L") 'string-inflection-lower-camelcase)  ;; Force to lowerCamelCase
 (global-set-key (kbd "C-c J") 'string-inflection-java-style-cycle) ;; Cycle through Java styles
-
 (global-set-key (kbd "M-x") 'smex)
 
 
@@ -97,21 +96,19 @@
 (load-theme 'brin t)
 
 ;; NeoTree
-(require 'neotree)
-(require 'all-the-icons)
 (global-set-key [f8] 'neotree-toggle)
-;;(setq-default neo-smart-open t)
+
 (setq doom-neotree-enable-file-icons t)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;;smex
+
 ;; Ibuffer
-(require 'ibuf-ext)
 (global-set-key (kbd "<f2>") 'ibuffer)
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default")))
+
 
 (setq ibuffer-saved-filter-groups
       (quote (("default"
@@ -133,27 +130,16 @@
                         (name . "^\\.bbdb$")
                         (name . "^\\.newsrc-dribble")))))))
 
+;;highlight
+(global-hl-line-mode 1)
+
+
 ;; ac
 (require 'auto-complete-config)
 (ac-config-default)
 
-(require 'paren)
-;; js
-(require 'js2-refactor)
-(require 'js-doc)
+;; yas
+;;https://github.com/AndreaCrotti/yasnippet-snippets
 
-(add-hook 'js-mode-hook 'js2-mode)
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(setq js2-highlight-level 3)
-
-(js2r-add-keybindings-with-prefix "C-c C-n")
-
-;; js-doc
-(setq js-doc-mail-address "sergiypavlichenko@gmail.com"
-       js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
-
- (add-hook 'js2-mode-hook
-           #'(lambda ()
-               (define-key js2-mode-map "\C-c-d" 'js-doc-insert-function-doc)
-               (define-key js2-mode-map "@" 'js-doc-insert-tag)))
+(add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets/")
+(yas-global-mode t)

@@ -56,3 +56,5 @@ site-lisp/package/
 *.last
 
 \.#init\.el
+
+\.projectile
