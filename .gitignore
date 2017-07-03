@@ -58,3 +58,6 @@ site-lisp/package/
 \.#init\.el
 
 \.projectile
+/projectile.cache
+/TAGS
+/snippets/

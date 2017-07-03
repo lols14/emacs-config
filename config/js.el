@@ -17,11 +17,6 @@
 ;; tern
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 
-(eval-after-load 'tern
- '(progn
-  	(require 'tern-auto-complete)
-  	(tern-ac-setup)))
-
 
 ;;beautify
 (eval-after-load 'js2-mode
@@ -31,6 +26,11 @@
 
 ;; js-doc
 (setq js-doc-mail-address "sergiypavlichenko@gmail.com"
-       js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
+			js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
 
 
+
+;; automatically clean up bad whitespace
+(setq whitespace-action '(auto-cleanup))
+;; only show bad whitespace
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
