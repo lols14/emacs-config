@@ -3,6 +3,7 @@
   (tide-setup)
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (setq tide-tsserver-executable "node_modules/typescript/bin/tsserver")
   (eldoc-mode +1)
   (tide-hl-identifier-mode +1)
   (bind-key "M-." 'tide-jump-to-definition)

@@ -1,0 +1,49 @@
+List of installed packages:
+
+
+  ac-js2             20140906.442  installed             Auto-complete source for Js2-mode, with navigation
+  ace-window         20170421.428  installed             Quickly switch windows.
+  all-the-icons      20170516.158  installed             A library for inserting Developer icons
+  auto-complete      20170124.1845 installed             Auto Completion for GNU Emacs
+  blank-mode         20130824.459  installed             minor mode to visualize TAB, (HARD) SPACE, NEWLINE
+  cider              20170525.255  installed             Clojure Interactive Development Environment that Rocks
+  clojure-mode-ex... 20170303.2310 installed             Extra font-locking for Clojure mode
+  coffee-mode        20170324.240  installed             Major mode for CoffeeScript code
+  company-tern       20161004.1147 installed             Tern backend for company-mode
+  dart-mode          20170525.1236 installed             Major mode for editing Dart files
+  desktop+           20170107.1332 installed             Handle special buffers when saving & restoring sessions
+  dracula-theme      20170412.845  installed             Dracula Theme
+  emmet-mode         20161113.2158 installed             Unofficial Emmet's support for emacs
+  expand-region      20170514.1309 installed             Increase selected region by semantic units.
+  flycheck-yamllint  20170325.1035 installed             Flycheck integration for YAMLLint
+  ggtags             20170510.744  installed             emacs frontend to GNU Global source code tagging system
+  helm               20170602.312  installed             Helm is an Emacs incremental and narrowing framework
+  helm-emmet         20160713.531  installed             helm sources for emmet-mode's snippets
+  helm-etags-plus    20170113.614  installed             Another Etags helm.el interface
+  helm-projectile    20170328.2152 installed             Helm integration for Projectile
+  highlight-chars    20170223.740  installed             Highlight specified sets of characters, including whitespace.
+  indium             20170602.552  installed             JavaScript Awesome Development Environment
+  js-doc             20160714.2134 installed             Insert JsDoc style comment easily
+  js2-refactor       20170525.544  installed             A JavaScript refactoring library for emacs.
+  json-mode          20170418.1900 installed             Major mode for editing JSON files.
+  magit              20170531.1739 installed             A Git porcelain inside Emacs
+  mark-multiple      20121118.754  installed             Sorta lets you mark several regions at once.
+  material-theme     20160908.1538 installed             A Theme based on the colors of the Google Material Design
+  multiple-cursors   20170215.552  installed             Multiple cursors for Emacs.
+  neotree            20170522.758  installed             A tree plugin like NerdTree for Vim
+  ng2-mode           20170504.2007 installed             Major modes for editing Angular 2
+  parinfer           20170430.321  installed             Simpler Lisp editing
+  powerline          20161121.2320 installed             Rewrite of Powerline
+  projectile         20170416.148  installed             Manage and navigate projects in Emacs easily
+  rainbow-mode       0.13          installed             Colorize color names in buffers
+  sass-mode          20161006.2326 installed             Major mode for editing Sass files
+  smex               20151212.1409 installed             M-x interface with Ido-style fuzzy matching.
+  spaceline          20170530.434  installed             Modeline configuration library for powerline
+  spaceline-all-t... 20170605.838  installed             A Spaceline theme using All The Icons
+  string-inflection  20170419.1638 installed             underscore -> UPCASE -> CamelCase -> lowerCamelCase conversion of names
+  sublime-themes     20160111.122  installed             A collection of themes based on Sublime Text
+  tide               20170609.753  installed             Typescript Interactive Development Environment
+  use-package        20170524.2245 installed             A use-package declaration for simplifying your .emacs
+  web-beautify       20161115.1447 installed             Format HTML, CSS and JavaScript/JSON
+  web-mode           20170603.632  installed             major mode for editing web templates
+  yaml-mode          20170406.241  installed             Major mode for editing YAML files

@@ -23,35 +23,17 @@
 (setq debug-on-error t)
 
 
-;; Parenthesis
-(require 'paren)
-(setq show-paren-style 'expression)
-(show-paren-mode 2)
 
 
 ;;highlight
 (global-hl-line-mode)
 
 
-;; (defun initColors ()
-;;    (let ((background "#2b303b")
-;; 		 (text  "#c0c5ce"))
-
-;; 	 (set-face-background 'show-paren-match-face text)
-;; 	 (set-face-foreground 'show-paren-match-face background) 
-;; 	 (set-face-background 'hl-line text)
-;; 	 (set-face-foreground 'hl-line background) 
-
-;; 	)
-;;)
-
-
-;;(initColors)
 ;; Theme
-(load-theme 'brin t)
+(load-theme 'dracula t)
 
-;;highlight
-(global-hl-line-mode 1)
+;; Highlight
+(global-hl-line-mode )
 
 ;;
 (powerline-default-theme)
@@ -63,3 +45,10 @@
 ;; (global-set-key (kbd "A-<up>") 'shrink-window)
 ;; (global-set-key (kbd "A-<left>") 'enlarge-window-horizontally)
 ;; (global-set-key (kbd "A-<right>") 'shrink-window-horizontally)
+
+;; Parenthesis
+(setq show-paren-style 'expression)
+(show-paren-mode 2)
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "#def")
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
