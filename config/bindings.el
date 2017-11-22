@@ -3,6 +3,9 @@
 (global-unset-key (kbd "M-u"))
 
 
+;; Mac
+(setq mac-command-modifier 'meta)
+
 
 (bind-keys*
  ("C-z" . undo)
