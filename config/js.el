@@ -1,6 +1,3 @@
-;; js
-(setenv "PATH" (concat (getenv "PATH") ":/home/sp/.nvm/versions/node/v8.0.0/bin"))
-(setq exec-path (append exec-path '("/home/sp/.nvm/versions/node/v8.0.0/bin")))
 
 ;;js2
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -19,14 +16,14 @@
 
 
 ;;beautify
-(eval-after-load 'js2-mode
-  '(add-hook 'js2-mode-hook
-             (lambda ()
-               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+;; (eval-after-load 'js2-mode
+;;  '(add-hook 'js2-mode-hook
+;;             (lambda ()
+;;               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
 
 ;; js-doc
 (setq js-doc-mail-address "sergiypavlichenko@gmail.com"
-			js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
+      js-doc-author (format "Sergiy Pavlichenko <%s>" js-doc-mail-address))
 
 
 
