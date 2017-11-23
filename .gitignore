@@ -61,3 +61,5 @@ site-lisp/package/
 /projectile.cache
 /TAGS
 /snippets/
+
+\.emacs-buffers

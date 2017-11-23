@@ -1,5 +1,6 @@
 ;; Tabs to spaces
 (global-set-key "\t" (lambda () (interactive) (insert-char 32 4)))
+(setq-default indent-tabs-mode nil)
 
 
 ;; Toolbar

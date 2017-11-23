@@ -13,7 +13,7 @@
     (define-key map (kbd "C-M-i") 'backward-paragraph)
     (define-key map (kbd "C-M-l") 'right-word)
     (define-key map (kbd "C-M-j") 'left-word)
-    (define-key map (kbd "M-d") 'backward-delete-char-unta)
+    (define-key map (kbd "M-d") 'backward-delete-char)
     (define-key map (kbd "M-k") 'next-line)
     (define-key map (kbd "M-i") 'previous-line)
     (define-key map (kbd "M-j") 'backward-char)
