@@ -1,4 +1,3 @@
-
 ;;js2
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq js2-highlight-level 3)

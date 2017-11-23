@@ -23,28 +23,21 @@
 (setq debug-on-error t)
 
 
-
-
 ;;highlight
 (global-hl-line-mode)
 
 
 ;; Theme
 (load-theme 'dracula t)
+(powerline-default-theme)
 
 ;; Highlight
 (global-hl-line-mode )
 
-;;
-(powerline-default-theme)
 
 ;; sound off
 (setq visible-bell 1)
 
-;; (global-set-key (kbd "A-<down>") 'enlarge-window)
-;; (global-set-key (kbd "A-<up>") 'shrink-window)
-;; (global-set-key (kbd "A-<left>") 'enlarge-window-horizontally)
-;; (global-set-key (kbd "A-<right>") 'shrink-window-horizontally)
 
 ;; Parenthesis
 (setq show-paren-style 'expression)

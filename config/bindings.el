@@ -6,53 +6,52 @@
 ;; Mac
 (setq mac-command-modifier 'meta)
 
+(defvar my-keys-minor-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "C-z") 'undo)
+    (define-key map (kbd "C-M-k") 'forward-paragraph)
+    (define-key map (kbd "C-M-i") 'backward-paragraph)
+    (define-key map (kbd "C-M-l") 'right-word)
+    (define-key map (kbd "C-M-j") 'left-word)
+    (define-key map (kbd "M-d") 'backward-delete-char-unta)
+    (define-key map (kbd "M-k") 'next-line)
+    (define-key map (kbd "M-i") 'previous-line)
+    (define-key map (kbd "M-j") 'backward-char)
+    (define-key map (kbd "M-l") 'forward-char)
+    (define-key map (kbd "M-p") 'ace-window)
+    (define-key map (kbd "M-f") 'delete-forward-char)
+    (define-key map (kbd "M-3") 'delete-other-windows)
+    (define-key map (kbd "M-4") 'split-window-below)
+    (define-key map (kbd "M-$") 'split-window-right)
+    (define-key map (kbd "M-0") 'delete-window)
+    (define-key map (kbd "M-SPC") 'set-mark-command)
+    (define-key map (kbd "C-=") 'text-scale-increase)
+    (define-key map (kbd "C--") 'text-scale-decrease)
+    (define-key map (kbd "M-<up>") 'windmove-up)
+    (define-key map (kbd "M-<down>") 'windmove-down)
+    (define-key map (kbd "M-<left>" ) 'windmove-left)
+    (define-key map (kbd "M-<right>") 'windmove-right)
+    (define-key map (kbd "M-2") 'er/expand-region)
+    map)
+  "my-keys-minor-mode keymap.")
 
-(bind-keys*
- ("C-z" . undo)
- ("C-M-k" . forward-paragraph)
- ("C-M-i" . backward-paragraph)
- ("C-M-l" . right-word)
- ("C-M-j" . left-word)
- ("M-d" . backward-delete-char-untabify)
- ("M-f" . delete-forward-char)
- ("M-3" . delete-other-windows)
- ("M-4" . split-window-below)
- ("M-$" . split-window-right)
- ("M-0" . delete-window)
- ("M-SPC" . set-mark-command)
- ;; ("M-k" . next-line)
- ;; ("M-i" . previous-line)
- ;; ("M-j" . backward-char)
- ;; ("M-l" . forward-char)
- ("C-=" . text-scale-increase)
- ("C--" . text-scale-decrease)
- ("M-<up>" . windmove-up)
- ("M-<down>" . windmove-down)
- ("M-<left>" . windmove-left)
- ("M-<right>" . windmove-right)
- ("M-2" . er/expand-region))
- ;; ("M-k" . next-line)
- ;; ("M-i" . previous-line)
- ;; ("M-j" . backward-char)
- ;; ("M-l" . forward-char))
-(global-set-key (kbd "M-k") 'next-line) ; Alt+a
-(global-set-key (kbd "M-i") 'previous-line) ; Ctrl+a
-(global-set-key (kbd "M-j") 'backward-char) ; Ctrl+c t
-(global-set-key (kbd "M-l") 'forward-char)    ; F7 F8
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that my key settings override annoying major modes."
+  :init-value t
+  :lighter " my-keys")
 
-(global-set-key (kbd "M-p") 'ace-window)
-
+(my-keys-minor-mode 1)
 
 
 (when (require 'redo nil 'noerror)
     (global-set-key (kbd "C-S-z") 'redo))
 
 
-;;Multiple cursors
-(require 'multiple-cursors)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(require 'mark-more-like-this)
+(global-set-key (kbd "C-<") 'mark-previous-like-this)
+(global-set-key (kbd "C->") 'mark-next-like-this)
+(global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
+(global-set-key (kbd "C-*") 'mark-all-like-this)
 
 (defun newline-without-break-of-line ()
   "1. move to end of the line.

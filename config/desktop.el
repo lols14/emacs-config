@@ -1,4 +1,4 @@
-;; (desktop-save-mode 1)
+(desktop-save-mode 1)
 
 
 ;; Source: https://github.com/purcell/emacs.d/blob/master/lisp/init-sessions.el
